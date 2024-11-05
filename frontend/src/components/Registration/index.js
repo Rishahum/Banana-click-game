@@ -49,6 +49,7 @@ const Registration = () => {
               type="radio"
               name="UserType"
               value="user"
+              checked={userType === "user"}
               onChange={(e) => setUserType(e.target.value)}
             />
             User
@@ -56,6 +57,7 @@ const Registration = () => {
               type="radio"
               name="UserType"
               value="admin"
+              checked={userType === "admin"}
               onChange={(e) => setUserType(e.target.value)}
             />
             Admin
