@@ -2,7 +2,15 @@ const userModel = require('../models//User')
 const bcrypt = require('bcrypt')
 const generateToken = require('../utils/generateToken')
 
+const { Server } = require('socket.io');
+const http = require('http');
 
+const express = require('express')
+const app = express();
+
+const server = http.createServer(app);
+
+const io = new Server(server);
 module.exports.registerUser= async function(req, res){
 
     try{
